@@ -197,7 +197,7 @@
                 <div>
 
                     <p class="text-sm font-semibold text-gray-500 mb-6">
-                    
+
 
 
                         <span class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-[#E6F4FB] text-blue-600">
@@ -978,52 +978,40 @@
     <footer class="bg-[#0f172a] text-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
-                <div class="space-y-4">
+                <!-- LOGO + TEXTE -->
+                <div class="space-y-4 text-center sm:text-left">
                     <a href="index.html">
                         <img src="src/assets/images/logo.png" alt="Logo Cabinet Vignyrou"
-                            class="h-20 w-20 object-contain mb-4"></a>
+                            class="h-20 w-20 object-contain mx-auto sm:mx-0 mb-4">
+                    </a>
 
-                    <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
-                        Un accompagnement humain et bienveillant <br>
-                        pour l'épanouissement des enfants et des <br>
-                        familles. Psychologie, pédagogie et coaching au service
-                        de votre croissance.
+                    <p class="text-sm text-gray-500 leading-relaxed max-w-sm mx-auto sm:mx-0">
+                        Un accompagnement humain et bienveillant pour l'épanouissement des enfants et des familles.
+                        Psychologie, pédagogie et coaching au service de votre croissance.
                     </p>
-                    <div class="flex space-x-3 pt-2">
 
-                        <a href="" class="
-                         flex items-center justify-center 
-                              w-12 h-12 rounded-full bg-gray-600 
-                                hover:bg-[#0190D4] transition-colors duration-300
-                                                ">
+                    <div class="flex space-x-3 pt-2 justify-center sm:justify-start">
+                        <a href=""
+                            class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-600 hover:bg-[#0190D4] transition">
                             <i class="ph ph-facebook-logo text-white text-3xl"></i>
                         </a>
-
-                        <a href="" class="
-                          flex items-center justify-center 
-                             w-12 h-12 rounded-full bg-gray-600 
-                              hover:bg-[#0190D4] transition-colors duration-300
-                                            ">
+                        <a href=""
+                            class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-600 hover:bg-[#0190D4] transition">
                             <i class="ph ph-tiktok-logo text-white text-3xl"></i>
                         </a>
-
-                        <a href="" class="
-                                    flex items-center justify-center 
-                                    w-12 h-12 rounded-full bg-gray-600 
-                                    hover:bg-[#0190D4] transition-colors duration-300
-                                ">
+                        <a href=""
+                            class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-600 hover:bg-[#0190D4] transition">
                             <i class="ph ph-instagram-logo text-white text-3xl"></i>
                         </a>
-
                     </div>
                 </div>
 
-                <div class="ml-20">
-                    <h3 class="text-xl font-semibold mb-6 text-white">Liens Rapides</h3>
-                    <ul class="space-y-3 text-sm">
-
+                <!-- LIENS RAPIDES -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-white text-center sm:text-left">Liens Rapides</h3>
+                    <ul class="space-y-3 text-sm text-center sm:text-left">
                         <li><a href="index.html" class="hover:text-blue-400 transition">Accueil</a></li>
                         <li><a href="a-propos.html" class="hover:text-blue-400 transition">A propos</a></li>
                         <li><a href="services.html" class="hover:text-blue-400 transition">Nos services</a></li>
@@ -1031,75 +1019,65 @@
                         <li><a href="blog.html" class="hover:text-blue-400 transition">Blog</a></li>
                         <li><a href="portfolio.html" class="hover:text-blue-400 transition">Portfolio</a></li>
                         <li><a href="contact.html" class="hover:text-blue-400 transition">Contact</a></li>
-
                     </ul>
                 </div>
 
-                <div class="ml-4">
-                    <h3 class="text-xl font-semibold mb-6 text-white">Nos Expertises</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li>
-                            <a href="services.html?filter=pedagogie"
-                                class="hover:text-white transition text-gray-500">Pédagogie positive</a>
-                        </li>
-                        <li>
-                            <a href="services.html?filter=psychologie"
-                                class="hover:text-white transition text-gray-500">Psychologie de l'enfant</a>
-                        </li>
-                        <li>
-                            <a href="services.html?filter=coaching"
-                                class="hover:text-white transition text-gray-500">Coaching familial</a>
-                        </li>
-                        <li>
-                            <a href="services.html?filter=orientation"
-                                class="hover:text-white transition text-gray-500">Orientation scolaire</a>
-                        </li>
-                        <li>
-                            <a href="services.html?filter=recherche"
-                                class="hover:text-white transition text-gray-500">Recherche & Développement</a>
-                        </li>
+                <!-- EXPERTISES -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-white text-center sm:text-left">Nos Expertises</h3>
+                    <ul class="space-y-3 text-sm text-center sm:text-left">
+                        <li><a href="services.html?filter=pedagogie"
+                                class="hover:text-white transition text-gray-500">Pédagogie positive</a></li>
+                        <li><a href="services.html?filter=psychologie"
+                                class="hover:text-white transition text-gray-500">Psychologie de l'enfant</a></li>
+                        <li><a href="services.html?filter=coaching"
+                                class="hover:text-white transition text-gray-500">Coaching familial</a></li>
+                        <li><a href="services.html?filter=orientation"
+                                class="hover:text-white transition text-gray-500">Orientation scolaire</a></li>
+                        <li><a href="services.html?filter=recherche"
+                                class="hover:text-white transition text-gray-500">Recherche & Développement</a></li>
                     </ul>
                 </div>
 
-                <div class="space-y-6">
-                    <h3 class="text-xl font-semibold mb-6 text-white">Nous Contacter</h3>
+                <!-- CONTACT -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-white text-center sm:text-left">Nous Contacter</h3>
 
-                    <div class="space-y-3 text-sm">
-                        <div class="flex items-start">
+                    <div class="space-y-3 text-sm text-center sm:text-left">
+                        <div class="flex justify-center sm:justify-start items-start">
                             <i class="ph ph-map-pin text-yellow-500 mr-3 text-xl mt-1"></i>
                             <p class="text-gray-500">Îlot. Maison Agnès TCHIAKPE, AKASSATO, ZOPAH</p>
                         </div>
-                        <div class="flex items-center">
+
+                        <div class="flex justify-center sm:justify-start items-center">
                             <i class="ph ph-phone text-blue-400 text-xl mr-3"></i>
                             <p class="text-gray-500">+229 0143380692</p>
                         </div>
-                        <div class="flex items-center">
+
+                        <div class="flex justify-center sm:justify-start items-center">
                             <i class="ph ph-envelope-simple text-xl text-[#009850] mr-3"></i>
                             <p class="text-gray-500">vphwhabi2024@gmail.com</p>
                         </div>
                     </div>
 
                     <div class="pt-4">
-                        <h4 class="font-medium mb-3">NEWSLETTER</h4>
-                        <form class="flex space-x-1">
-                            <input type="email" placeholder="Votre email" class="py-1 px-4 w-full rounded-md 
-                   bg-white/10 text-white placeholder-gray-400 border border-transparent 
-                   focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150">
-                            <button type="submit" class="p-2 bg-blue-500 hover:bg-[#0190D4] rounded-md transition 
-                               flex items-center justify-center">
+                        <h4 class="font-medium mb-3 text-center sm:text-left">NEWSLETTER</h4>
+                        <form class="flex space-x-1 justify-center sm:justify-start">
+                            <input type="email" placeholder="Votre email"
+                                class="py-1 px-4 w-full rounded-md bg-white/10 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 transition">
+                            <button type="submit" class="p-2 bg-blue-500 hover:bg-[#0190D4] rounded-md transition">
                                 <i class="ph ph-envelope-simple text-white text-2xl"></i>
                             </button>
-
                         </form>
                     </div>
-
                 </div>
 
             </div>
 
             <div class="border-t border-gray-700 mt-12 mb-6"></div>
 
-            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 text-center md:text-left">
                 <p class="mb-3 md:mb-0">© 2025 Cabinet Vignyrou Pour Humanité. Tous droits réservés.</p>
                 <div class="space-x-4">
                     <a href="mention.html" class="hover:text-gray-300 transition">Mentions légales</a>
@@ -1110,6 +1088,7 @@
 
         </div>
     </footer>
+
 
 
     <!-- top button -->
