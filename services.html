@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vigninou</title>
+    <link rel="stylesheet" href="src/css/output.css" />
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@latest/dist/css/phosphor.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+
+<body>
+
+    <!-- En tete de ma page -->
+  <header class="w-full">
+
+        <div id="header-info-bar"
+            class="bg-[#0190D4] text-white p-2 text-sm hidden md:flex items-center justify-between">
+            <div class="flex items-center ml-5 space-x-6">
+                <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                        </path>
+                    </svg>
+                    <span>+229 014388692</span>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z">
+                        </path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span>IIX Maison Agélia, TOHUEKPE, AKASSATO, ZOPAH</span>
+                </div>
+            </div>
+
+            <div class="flex items-center mr-5 space-x-3">
+                <span>Suivez-nous sur :</span>
+                <div class="flex space-x-2">
+                    <a href="#" class="hover:text-gray-200">
+                        <i class="ph ph-facebook-logo"></i>
+                    </a>
+                    <a href="#" class="hover:text-gray-200">
+                        <i class="ph ph-tiktok-logo"></i>
+                    </a>
+                    <a href="#" class="hover:text-gray-200">
+                        <i class="ph ph-instagram-logo"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav id="main-navbar" class="bg-white shadow-sm border-b border-gray-100 w-full transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+
+                    <div class="flex-shrink-0 flex items-center h-full">
+                        <a href="index.html" class="flex items-center space-x-2">
+                            <img src="src/assets/images/logo.png" alt="Logo de votre entreprise"
+                                class="w-12 h-16 object-cover" />
+                            <span class="text-xl font-bold text-gray-900 hidden sm:block">VIGNINOU</span>
+                        </a>
+                    </div>
+
+                    <div class="hidden md:flex md:space-x-3 items-center h-full">
+                        <a href="index.html"
+                            class="nav-link text-gray-700 hover:text-blue-500 px-1 py-1 font-medium">Accueil</a>
+                        <a href="a-propos.html"
+                            class="nav-link text-gray-700 hover:text-blue-500 px-1 py-1 font-medium">A propos</a>
+                        <a href="services.html"
+                            class="nav-link text-gray-700 hover:text-blue-500 px-1 py-1 font-medium">Nos services</a>
+                        <a href="formations.html"
+                            class="nav-link text-gray-700 hover:text-blue-500 px-1 py-1 font-medium">Formations</a>
+                        <a href="blog.html"
+                            class="nav-link text-gray-700 hover:text-blue-500 px-1 py-1 font-medium">Blog</a>
+                        <a href="portfolio.html"
+                            class="nav-link text-gray-700 hover:text-blue-500 px-1 py-1 font-medium">Portfolio</a>
+                        <a href="contact.html"
+                            class="nav-link text-gray-700 hover:text-blue-500 px-1 py-1 font-medium">Contact</a>
+                    </div>
+
+                    <div class="flex items-center gap-6">
+
+                        <div class="hidden md:flex items-center gap-6">
+                            <a href="#"
+                                class="flex items-center gap-2 text-[#009850] hover:text-green-700 transition duration-300 font-semibold">
+                                <i class="ph ph-user text-lg"></i>
+                                <span>Espace E-learning</span>
+                            </a>
+
+                            <a href="services.html">
+                                <button
+                                    class="bg-blue-400 hover:bg-blue-500 text-white font-medium py-2 px-4 rounded-lg shadow-md transition duration-300 whitespace-nowrap">
+                                    Prendre rendez-vous
+                                </button>
+                            </a>
+                        </div>
+
+                        <button id="mobile-menu-button" type="button"
+                            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                            aria-controls="mobile-sidebar" aria-expanded="false">
+                            <span class="sr-only">Ouvrir le menu principal</span>
+                            <i class="ph ph-list text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+        <div id="sidebar-overlay"
+            class="fixed inset-0 bg-black/40 backdrop-blur-[1px] z-40 hidden transition-all duration-300"
+            aria-hidden="true">
+        </div>
+
+
+
+        <div id="mobile-sidebar"
+            class="fixed inset-y-0 right-0 w-64 bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-500 md:hidden flex flex-col">
+
+            <div class="flex-shrink-0 p-4 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+                <span class="text-xl font-bold text-gray-900 flex items-center">
+                    <img src="src/assets/images/logo.png" alt="Logo" class="w-8 h-8 mr-2 object-cover" />
+                    VIGNINOU
+                </span>
+                <button id="close-sidebar-button" class="text-gray-500 hover:text-[#0190D4] transition">
+                    <i class="ph ph-x text-2xl"></i>
+                </button>
+            </div>
+
+            <div class="flex-grow overflow-y-auto p-4 space-y-2 scrollbar-hide">
+                <a href="index.html"
+                    class="nav-link block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#0190D4] rounded-lg font-medium transition duration-150">
+                    <i class="ph ph-house text-lg mr-2"></i> Accueil
+                </a>
+                <a href="a-propos.html"
+                    class="nav-link block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#0190D4] rounded-lg font-medium transition duration-150">
+                    <i class="ph ph-info text-lg mr-2"></i> À propos
+                </a>
+                <a href="services.html"
+                    class="nav-link block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#0190D4] rounded-lg font-medium transition duration-150">
+                    <i class="ph ph-gear-six text-lg mr-2"></i> Nos services
+                </a>
+                <a href="formations.html"
+                    class="nav-link block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#0190D4] rounded-lg font-medium transition duration-150">
+                    <i class="ph ph-graduation-cap text-lg mr-2"></i> Formations
+                </a>
+                <a href="blog.html"
+                    class="nav-link block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#0190D4] rounded-lg font-medium transition duration-150">
+                    <i class="ph ph-newspaper text-lg mr-2"></i> Blog
+                </a>
+                <a href="portfolio.html"
+                    class="nav-link block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#0190D4] rounded-lg font-medium transition duration-150">
+                    <i class="ph ph-image text-lg mr-2"></i> Portfolio
+                </a>
+                <a href="contact.html"
+                    class="nav-link block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#0190D4] rounded-lg font-medium transition duration-150">
+                    <i class="ph ph-envelope-simple text-lg mr-2"></i> Contact
+                </a>
+            </div>
+
+            <div class="flex-shrink-0 p-4 border-t border-gray-100 space-y-3 bg-gray-50">
+                <a href="#"
+                    class="block px-3 py-2 text-[#009850] hover:text-green-700 font-semibold transition duration-150 rounded-lg bg-green-50 hover:bg-green-100">
+                    <i class="ph ph-user text-lg mr-2"></i> Espace E-learning
+                </a>
+                <a href="services.html" class="block w-full">
+                    <button
+                        class="w-full bg-[#0190D4] hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300">
+                        Prendre rendez-vous
+                    </button>
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+
+
+
+    <div class=" py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
+                Nos Services
+            </h2>
+
+            <p class="mt-4 text-lg text-[#475569] max-w-3xl mx-auto">
+                Une offre complète et pluridisciplinaire pour répondre à tous vos besoins éducatifs et psychologiques.
+            </p>
+
+        </div>
+    </div>
+
+    <section id="nos-expertises-section" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <!-- FILTRES CENTRÉS -->
+            <div class="flex flex-wrap justify-center gap-4 mb-10">
+                <button class="filter-btn px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-semibold"
+                    data-filter="all">
+                    Tous les services
+                </button>
+
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full text-sm font-semibold"
+                    data-filter="pedagogie">
+                    Pédagogie
+                </button>
+
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full text-sm font-semibold"
+                    data-filter="psychologie">
+                    Psychologie
+                </button>
+
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full text-sm font-semibold"
+                    data-filter="developpement">
+                    Développement
+                </button>
+
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full text-sm font-semibold"
+                    data-filter="coaching">
+                    Coaching familial
+                </button>
+
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full text-sm font-semibold"
+                    data-filter="orientation">
+                    Orientation
+                </button>
+
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full text-sm font-semibold"
+                    data-filter="recherche">
+                    Recherche
+                </button>
+            </div>
+
+
+            <!-- GRILLE -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- CARD -->
+                <div id="pedagogie-positive-card"
+                    class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition"
+                    data-category="pedagogie">
+
+                    <span class="text-xs font-bold text-blue-700 bg-blue-100 px-3 py-1 rounded-full">
+                        PÉDAGOGIE
+                    </span>
+
+                    <h3 class="mt-4 text-xl font-semibold text-gray-800">
+                        Soutien Scolaire Personnalisé
+                    </h3>
+
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        Un accompagnement sur mesure pour combler les lacunes et redonner le goût d'apprendre grâce à
+                        des méthodes actives.
+                    </p>
+
+                    <div class="mt-4 text-sm  text-gray-700">
+                        <p class="font-semibold mb-2">Bénéfices :</p>
+                        <ul class="space-y-1 ml-2">
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i>Reprise de confiance
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Meilleurs résultats
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Autonomie
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between text-gray-500 text-sm">
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-users text-gray-400"></i> Enfants du primaire au lycée
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-clock text-gray-400"></i> Séance de 1h30
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex items-center justify-between">
+                        <p class="text-sm font-semibold text-blue-500">Sur devis</p>
+
+                        <button
+                            class="px-5 py-2 bg-blue-500 text-white font-medium text-sm rounded-lg hover:bg-blue-600 transition flex items-center gap-1">
+                            Réserver <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div id="coaching-familial-harmonie-card"
+                    class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition"
+                    data-category="coaching">
+
+                    <span class="text-xs font-bold text-green-700 bg-green-100 px-3 py-1 rounded-full">
+                        COACHING FAMILIAL
+                    </span>
+
+                    <h3 class="mt-4 text-xl font-semibold text-gray-800">
+                        Harmonie Familiale
+                    </h3>
+
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        Accompagnement global pour restaurer l’équilibre, apaiser les tensions et renforcer la
+                        communication entre les membres de la famille.
+                    </p>
+
+                    <div class="mt-4 text-sm text-gray-700">
+                        <p class="font-semibold mb-2">Bénéfices :</p>
+                        <ul class="space-y-1 ml-2">
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i>Relations plus sereines
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Communication améliorée
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Cadre familial plus structuré
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between text-gray-500 text-sm">
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-users text-gray-400"></i> Familles (parents + enfants)
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-clock text-gray-400"></i> Séance de 1h
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex items-center justify-between">
+                        <p class="text-sm font-semibold text-blue-500">Sur devis</p>
+
+                        <button
+                            class="px-5 py-2 bg-blue-500 text-white font-medium text-sm rounded-lg hover:bg-blue-600 transition flex items-center gap-1">
+                            Réserver <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div id="psychologie-enfant-card"
+                    class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition "
+                    data-category="psychologie">
+
+                    <span class="text-xs font-bold text-red-700 bg-red-100 px-3 py-1 rounded-full">
+                        PYSCHOLOGIE
+                    </span>
+
+                    <h3 class="mt-4 text-xl font-semibold text-gray-800">
+                        Thérapie de l’Enfant
+                    </h3>
+
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        Espace de parole et de jeu pour apaiser les difficultés émotionnelles ou relationnelles.
+                    </p>
+
+                    <div class="mt-4 text-sm text-gray-700">
+                        <p class="font-semibold mb-2">Bénéfices :</p>
+                        <ul class="space-y-1 ml-2">
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i>Gestion émotions
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Bien-être
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Apaisement
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between text-gray-500 text-sm">
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-users text-gray-400"></i> Enfants de 3 à 12 ans
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-clock text-gray-400"></i> Séance de 45 min
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex items-center justify-between">
+                        <p class="text-sm font-semibold text-blue-500">Sur devis</p>
+
+                        <button
+                            class="px-5 py-2 bg-blue-500 text-white font-medium text-sm rounded-lg hover:bg-blue-600 transition flex items-center gap-1">
+                            Réserver <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div id="developpement-organisation-card"
+                    class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition"
+                    data-category="developpement">
+
+                    <span class="text-xs font-bold text-[#F5C20A] bg-yellow-100 px-3 py-1 rounded-full">
+                        DÉVELOPPEMENT
+                    </span>
+
+                    <h3 class="mt-4 text-xl font-semibold text-gray-800">
+                        Coaching d’Organisation
+                    </h3>
+
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        Méthodes pratiques pour aider l’enfant/ado à mieux s’organiser et gagner en autonomie.
+                    </p>
+
+                    <div class="mt-4 text-sm text-gray-700">
+                        <p class="font-semibold mb-2">Bénéfices :</p>
+                        <ul class="space-y-1 ml-2">
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i>Meilleure gestion du temps et des devoirs
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Méthode d’étude simple et efficace
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Apaisement
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between text-gray-500 text-sm">
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-users text-gray-400"></i> Enfants du primaire au lycée
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-clock text-gray-400"></i> Séance de 1h
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex items-center justify-between">
+                        <p class="text-sm font-semibold text-blue-500">Sur devis</p>
+
+                        <button
+                            class="px-5 py-2 bg-blue-500 text-white font-medium text-sm rounded-lg hover:bg-blue-600 transition flex items-center gap-1">
+                            Réserver <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div id="orientation-bilan-card"
+                    class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition"
+                    data-category="orientation">
+
+                    <span class="text-xs font-bold text-black bg-gray-100 px-3 py-1 rounded-full">
+                        ORIENTATION
+                    </span>
+
+                    <h3 class="mt-4 text-xl font-semibold text-gray-800">
+                        Bilan d’Orientation
+                    </h3>
+
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        Un accompagnement sur mesure pour combler les lacunes et redonner le goût d'apprendre grâce à
+                        des méthodes actives.
+                    </p>
+
+                    <div class="mt-4 text-sm text-gray-700">
+                        <p class="font-semibold mb-2">Bénéfices :</p>
+                        <ul class="space-y-1 ml-2">
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i>Motivation
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Projet claire
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Confiance
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between text-gray-500 text-sm">
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-users text-gray-400"></i> Enfants du primaire au lycée
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-clock text-gray-400"></i> Parcours de 4 séances
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex items-center justify-between">
+                        <p class="text-sm font-semibold text-blue-500">Sur devis</p>
+
+                        <button
+                            class="px-5 py-2 bg-blue-500 text-white font-medium text-sm rounded-lg hover:bg-blue-600 transition flex items-center gap-1">
+                            Réserver <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div id="pedagogie-positive-card"
+                    class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition"
+                    data-category="pedagogie">
+
+                    <span class="text-xs font-bold text-blue-700 bg-blue-100 px-3 py-1 rounded-full">
+                        PÉDAGOGIE
+                    </span>
+
+                    <h3 class="mt-4 text-xl font-semibold text-gray-800">
+                        Ateliers d’Éveil
+                    </h3>
+
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        Activités ludiques pour stimuler la curiosité et le développement cognitif.
+                    </p>
+
+                    <div class="mt-4 text-sm  text-gray-700">
+                        <p class="font-semibold mb-2">Bénéfices :</p>
+                        <ul class="space-y-1 ml-2">
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i>Socialisation
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Découverte
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Motricité
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between text-gray-500 text-sm">
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-users text-gray-400"></i> Enfants de 3 à 6 ans
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-clock text-gray-400"></i> Séance de 2h
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex items-center justify-between">
+                        <p class="text-sm font-semibold text-blue-500">Sur devis</p>
+
+                        <button
+                            class="px-5 py-2 bg-blue-500 text-white font-medium text-sm rounded-lg hover:bg-blue-600 transition flex items-center gap-1">
+                            Réserver <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div id="recherche-publications-card"
+                    class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition"
+                    data-category="recherche">
+
+                    <span class="text-xs font-bold text-black bg-gray-100 px-3 py-1 rounded-full">
+                        RECHERCHE
+                    </span>
+
+                    <h3 class="mt-4 text-xl font-semibold text-gray-800">
+                        Études & Publications
+                    </h3>
+
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        Participation à des projets de recherche éducative en contexte africain.
+                    </p>
+
+                    <div class="mt-4 text-sm text-gray-700">
+                        <p class="font-semibold mb-2">Bénéfices :</p>
+                        <ul class="space-y-1 ml-2">
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i>Innovation
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Impact
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Production scientifique
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between text-gray-500 text-sm">
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-users text-gray-400"></i> Institutions et chercheurs
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-clock text-gray-400"></i> Sur projet
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex items-center justify-between">
+                        <p class="text-sm font-semibold text-blue-500">Sur devis</p>
+
+                        <button
+                            class="px-5 py-2 bg-blue-500 text-white font-medium text-sm rounded-lg hover:bg-blue-600 transition flex items-center gap-1">
+                            Réserver <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div id="psychologie-enfant-card"
+                    class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition"
+                    data-category="psychologie">
+
+                    <span class="text-xs font-bold text-red-700 bg-red-100 px-3 py-1 rounded-full">
+                        PYSCHOLOGIE
+                    </span>
+
+                    <h3 class="mt-4 text-xl font-semibold text-gray-800">
+                        Guidance Parentale
+                    </h3>
+
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        Aide les parents à mieux comprendre leur enfant et adopter les réactions adaptées.
+                    </p>
+
+                    <div class="mt-4 text-sm text-gray-700">
+                        <p class="font-semibold mb-2">Bénéfices :</p>
+                        <ul class="space-y-1 ml-2">
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i>Sérénité familiale
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Communication
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Outils concrets
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between text-gray-500 text-sm">
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-users text-gray-400"></i> Parents (seul ou en couple)
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-clock text-gray-400"></i> Séance de 1h
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex items-center justify-between">
+                        <p class="text-sm font-semibold text-blue-500">Sur devis</p>
+
+                        <button
+                            class="px-5 py-2 bg-blue-500 text-white font-medium text-sm rounded-lg hover:bg-blue-600 transition flex items-center gap-1">
+                            Réserver <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div id="coaching-familial-harmonie-card"
+                    class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition"
+                    data-category="coaching">
+
+                    <span class="text-xs font-bold text-green-700 bg-green-100 px-3 py-1 rounded-full">
+                        COACHING FAMILIAL
+                    </span>
+
+                    <h3 class="mt-4 text-xl font-semibold text-gray-800">
+                        Gestion des Conflits Familiaux
+                    </h3>
+
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        Un accompagnement ciblé pour comprendre l’origine des tensions, rétablir le dialogue et
+                        construire un climat familial plus apaisé.
+                    </p>
+
+                    <div class="mt-4 text-sm text-gray-700">
+                        <p class="font-semibold mb-2">Bénéfices :</p>
+                        <ul class="space-y-1 ml-2">
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i>Mise en place de règles familiales équilibrées
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Réduction des tensions quotidiennes
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ph ph-check text-green-500"></i> Mise en place de règles familiales
+                                équilibrées
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between text-gray-500 text-sm">
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-users text-gray-400"></i> Familles, parents, fratries
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <i class="ph ph-clock text-gray-400"></i> Séance de 1h30
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex items-center justify-between">
+                        <p class="text-sm font-semibold text-blue-500">Sur devis</p>
+
+                        <button
+                            class="px-5 py-2 bg-blue-500 text-white font-medium text-sm rounded-lg hover:bg-blue-600 transition flex items-center gap-1">
+                            Réserver <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+    </section>
+
+
+
+
+
+    <footer class="bg-[#0f172a] text-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+
+                <div class="space-y-4">
+                    <a href="index.html">
+                        <img src="src/assets/images/logo.png" alt="Logo Cabinet Vignyrou"
+                            class="h-20 w-20 object-contain mb-4"></a>
+
+                    <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
+                        Un accompagnement humain et bienveillant <br>
+                        pour l'épanouissement des enfants et des <br>
+                        familles. Psychologie, pédagogie et coaching au service
+                        de votre croissance.
+                    </p>
+                    <div class="flex space-x-3 pt-2">
+
+                        <a href="" class="
+                         flex items-center justify-center 
+                              w-12 h-12 rounded-full bg-gray-600 
+                                hover:bg-[#0190D4] transition-colors duration-300
+                                                ">
+                            <i class="ph ph-facebook-logo text-white text-3xl"></i>
+                        </a>
+
+                        <a href="" class="
+                          flex items-center justify-center 
+                             w-12 h-12 rounded-full bg-gray-600 
+                              hover:bg-[#0190D4] transition-colors duration-300
+                                            ">
+                            <i class="ph ph-tiktok-logo text-white text-3xl"></i>
+                        </a>
+
+                        <a href="" class="
+                                    flex items-center justify-center 
+                                    w-12 h-12 rounded-full bg-gray-600 
+                                    hover:bg-[#0190D4] transition-colors duration-300
+                                ">
+                            <i class="ph ph-instagram-logo text-white text-3xl"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="ml-20">
+                    <h3 class="text-xl font-semibold mb-6 text-white">Liens Rapides</h3>
+                    <ul class="space-y-3 text-sm">
+
+                        <li><a href="index.html" class="hover:text-blue-400 transition">Accueil</a></li>
+                        <li><a href="a-propos.html" class="hover:text-blue-400 transition">A propos</a></li>
+                        <li><a href="services.html" class="hover:text-blue-400 transition">Nos services</a></li>
+                        <li><a href="formations.html" class="hover:text-blue-400 transition">Formations</a></li>
+                        <li><a href="blog.html" class="hover:text-blue-400 transition">Blog</a></li>
+                        <li><a href="portfolio.html" class="hover:text-blue-400 transition">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400 transition">Contact</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="ml-4">
+                    <h3 class="text-xl font-semibold mb-6 text-white">Nos Expertises</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li>
+                            <a href="#" onclick="filterCards('pedagogie'); return false;"
+                                class="hover:text-white transition text-gray-500" data-target="pedagogie">Pédagogie
+                                positive</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="filterCards('psychologie'); return false;"
+                                class="hover:text-white transition text-gray-500" data-target="psychologie">Psychologie
+                                de l'enfant</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="filterCards('coaching'); return false;"
+                                class="hover:text-white transition text-gray-500" data-target="coaching">Coaching
+                                familial</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="filterCards('orientation'); return false;"
+                                class="hover:text-white transition text-gray-500" data-target="orientation">Orientation
+                                scolaire</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="filterCards('recherche'); return false;"
+                                class="hover:text-white transition text-gray-500" data-target="recherche">Recherche &
+                                Développement</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold mb-6 text-white">Nous Contacter</h3>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start">
+                            <i class="ph ph-map-pin text-yellow-500 mr-3 text-xl mt-1"></i>
+                            <p class="text-gray-500">Îlot. Maison Agnès TCHIAKPE, AKASSATO, ZOPAH</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ph ph-phone text-blue-400 text-xl mr-3"></i>
+                            <p class="text-gray-500">+229 0143380692</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ph ph-envelope-simple text-xl text-[#009850] mr-3"></i>
+                            <p class="text-gray-500">vphwhabi2024@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <h4 class="font-medium mb-3">NEWSLETTER</h4>
+                        <form class="flex space-x-1">
+                            <input type="email" placeholder="Votre email" class="py-1 px-4 w-full rounded-md 
+                   bg-white/10 text-white placeholder-gray-400 border border-transparent 
+                   focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150">
+                            <button type="submit" class="p-2 bg-blue-500 hover:bg-[#0190D4] rounded-md transition 
+                               flex items-center justify-center">
+                                <i class="ph ph-envelope-simple text-white text-2xl"></i>
+                            </button>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 mb-6"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p class="mb-3 md:mb-0">© 2025 Cabinet Vignyrou Pour Humanité. Tous droits réservés.</p>
+                <div class="space-x-4">
+                    <a href="mention.html" class="hover:text-gray-300 transition">Mentions légales</a>
+                    <a href="cgv.html" class="hover:text-gray-300 transition">CGV</a>
+                    <a href="politique.html" class="hover:text-gray-300 transition">Politiques de confidentialité</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" class="fixed bottom-4 right-4 z-50 p-3
+                bg-[#0190D4] text-white
+                rounded-full shadow-xl
+                transition-opacity duration-300 opacity-0 pointer-events-none
+                hover:bg-[#0190D4] hover:text-[#016a0e] text-sm md:text-base">
+
+        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="src/scripts/script-index.js"></script>
+    <script src="src/scripts/script-services.js"></script>
+
+
+
+</body>
+
+</html>

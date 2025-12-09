@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Animation douce pour l'apparition */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    /* Assurez-vous d'utiliser le nom exact de la police 'Nunito' */
+    font-family: "Nunito", sans-serif;
+}
+
+
+html,
+body {
+    overflow-x: hidden;
+    /* Empêche le défilement horizontal global */
+    width: 100%;
+}
+
+
+body.aos-animate {
+    overflow-x: hidden !important;
+}
+
+
+
+
+
+
+/* Ajout d'une ombre personnalisée légère pour les cartes, 
+           similaire à celle de l'image. Tailwind's 'shadow-lg' pourrait aussi fonctionner. */
+.card-shadow {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Gestion du scroll pour les ancres */
+main {
+    min-height: 100vh;
+    overflow-y: visible;
+}
+
+section {
+    overflow-x: hidden;
+}
+
+
+
+.organic-blob {
+
+    clip-path: path("M 5.8,40.0 C 5.8,61.9 29.8,88.7 50.0,88.9 C 70.0,89.1 94.2,60.8 94.2,40.0 C 94.2,19.2 68.3,0.3 50.0,0.1 C 31.7,-0.1 5.8,18.1 5.8,40.0 Z");
+}
+
+
+.blob-approx {
+    clip-path: polygon(10% 0%, 90% 10%, 100% 50%, 80% 100%, 20% 90%, 0% 50%);
+}
+
+;
+
+/* Utilisation de la directive @layer components pour intégrer la classe dans Tailwind */
+@layer components {
+    .blob-blue-shape {
+        /* Valeur clip-path approximative de la forme organique. */
+        clip-path: path("M 20 10 C 20 40, 50 60, 80 40 C 90 20, 80 0, 50 10 C 20 20, 10 0, 20 10");
+    }
+}
+
+
+
+
+
+
+
+/* Ajoutez ces lignes à votre fichier CSS (par exemple, globals.css) */
+@keyframes scroll-logos {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+        /* Déplace le contenu de 50% vers la gauche */
+    }
+}
+
+/* Ajout de la classe utilitaire d'animation Tailwind (nécessite PostCSS ou un équivalent) */
+.animate-infinite-scroll {
+    animation: scroll-logos 30s linear infinite;
+    /* 30s = vitesse (ajustez) */
+}
+
+
+/* CSS pour l'effet de zoom des cartes (effet sur toute la carte) */
+.group:hover .card-zoom-target {
+    transform: scale(1.03);
+    /* Ajustez la valeur pour un zoom plus ou moins prononcé */
+}
+
+/* CSS pour l'effet de zoom de l'image (effet uniquement sur l'image) */
+.group:hover .image-zoom-target {
+    transform: scale(1.1);
+    /* Ajustez la valeur pour un zoom plus ou moins prononcé sur l'image */
+}
+
+/* Transition pour une animation fluide */
+.card-zoom-target,
+.image-zoom-target {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+
+/* --- Conteneur et styles de base --- */
+.image-container {
+    max-width: 400px;
+    /* Taille maximale de l'image */
+    margin: 30px auto;
+    /* Centrage pour l'exemple */
+}
+
+/* --- Style de l'image (le plus important) --- */
+.image-personnalisee {
+    display: block;
+    width: 100%;
+    height: auto;
+
+   
+            
+            /* S'assure que l'image respecte les limites des coins */
+    overflow: hidden;
+}
+
+
+
+/* Masquer la barre de défilement sur les navigateurs basés sur Webkit (Chrome, Safari, la plupart des mobiles) */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Masquer la barre de défilement sur Firefox, IE et Edge */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    /* Pour IE et Edge */
+    scrollbar-width: none;
+    /* Pour Firefox */
+}

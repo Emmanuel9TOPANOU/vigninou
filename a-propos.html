@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vigninou</title>
+    <link rel="stylesheet" href="src/css/output.css" />
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@latest/dist/css/phosphor.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <!-- En tete de ma page -->
+    <header class="w-full">
+
+        <div id="header-info-bar"
+            class="bg-[#0190D4] text-white p-2 text-sm hidden md:flex items-center justify-between">
+            <div class="flex items-center ml-5 space-x-6">
+                <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                        </path>
+                    </svg>
+                    <span>+229 014388692</span>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z">
+                        </path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span>IIX Maison Agélia, TOHUEKPE, AKASSATO, ZOPAH</span>
+                </div>
+            </div>
+
+            <div class="flex items-center mr-5 space-x-3">
+                <span>Suivez-nous sur :</span>
+                <div class="flex space-x-2">
+                    <a href="#" class="hover:text-gray-200">
+                        <i class="ph ph-facebook-logo"></i>
+                    </a>
+                    <a href="#" class="hover:text-gray-200">
+                        <i class="ph ph-tiktok-logo"></i>
+                    </a>
+                    <a href="#" class="hover:text-gray-200">
+                        <i class="ph ph-instagram-logo"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav id="main-navbar" class="bg-white shadow-sm border-b border-gray-100 w-full transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+
+                    <div class="flex-shrink-0 flex items-center h-full">
+                        <a href="index.html" class="flex items-center space-x-2">
+                            <img src="src/assets/images/logo.png" alt="Logo de votre entreprise"
+                                class="w-12 h-16 object-cover" />
+                            <span class="text-xl font-bold text-gray-900 hidden sm:block">VIGNINOU</span>
+                        </a>
+                    </div>
+
+                    <div class="hidden md:flex md:space-x-3 items-center h-full">
+                        <a href="index.html"
+                            class="nav-link text-gray-700 hover:text-blue-500 px-1 py-1 font-medium">Accueil</a>
+                        <a href="a-propos.html"
+                            class="nav-link text-gray-700 hover:text-blue-500 px-1 py-1 font-medium">A propos</a>
+                        <a href="services.html"
+                            class="nav-link text-gray-700 hover:text-blue-500 px-1 py-1 font-medium">Nos services</a>
+                        <a href="formations.html"
+                            class="nav-link text-gray-700 hover:text-blue-500 px-1 py-1 font-medium">Formations</a>
+                        <a href="blog.html"
+                            class="nav-link text-gray-700 hover:text-blue-500 px-1 py-1 font-medium">Blog</a>
+                        <a href="portfolio.html"
+                            class="nav-link text-gray-700 hover:text-blue-500 px-1 py-1 font-medium">Portfolio</a>
+                        <a href="contact.html"
+                            class="nav-link text-gray-700 hover:text-blue-500 px-1 py-1 font-medium">Contact</a>
+                    </div>
+
+                    <div class="flex items-center gap-6">
+
+                        <div class="hidden md:flex items-center gap-6">
+                            <a href="#"
+                                class="flex items-center gap-2 text-[#009850] hover:text-green-700 transition duration-300 font-semibold">
+                                <i class="ph ph-user text-lg"></i>
+                                <span>Espace E-learning</span>
+                            </a>
+
+                            <a href="services.html">
+                                <button
+                                    class="bg-blue-400 hover:bg-blue-500 text-white font-medium py-2 px-4 rounded-lg shadow-md transition duration-300 whitespace-nowrap">
+                                    Prendre rendez-vous
+                                </button>
+                            </a>
+                        </div>
+
+                        <button id="mobile-menu-button" type="button"
+                            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                            aria-controls="mobile-sidebar" aria-expanded="false">
+                            <span class="sr-only">Ouvrir le menu principal</span>
+                            <i class="ph ph-list text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+        <div id="sidebar-overlay"
+            class="fixed inset-0 bg-black/40 backdrop-blur-[1px] z-40 hidden transition-all duration-300"
+            aria-hidden="true">
+        </div>
+
+
+
+        <div id="mobile-sidebar"
+            class="fixed inset-y-0 right-0 w-64 bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-500 md:hidden flex flex-col">
+
+            <div class="flex-shrink-0 p-4 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+                <span class="text-xl font-bold text-gray-900 flex items-center">
+                    <img src="src/assets/images/logo.png" alt="Logo" class="w-8 h-8 mr-2 object-cover" />
+                    VIGNINOU
+                </span>
+                <button id="close-sidebar-button" class="text-gray-500 hover:text-[#0190D4] transition">
+                    <i class="ph ph-x text-2xl"></i>
+                </button>
+            </div>
+
+            <div class="flex-grow overflow-y-auto p-4 space-y-2 scrollbar-hide">
+                <a href="index.html"
+                    class="nav-link block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#0190D4] rounded-lg font-medium transition duration-150">
+                    <i class="ph ph-house text-lg mr-2"></i> Accueil
+                </a>
+                <a href="a-propos.html"
+                    class="nav-link block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#0190D4] rounded-lg font-medium transition duration-150">
+                    <i class="ph ph-info text-lg mr-2"></i> À propos
+                </a>
+                <a href="services.html"
+                    class="nav-link block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#0190D4] rounded-lg font-medium transition duration-150">
+                    <i class="ph ph-gear-six text-lg mr-2"></i> Nos services
+                </a>
+                <a href="formations.html"
+                    class="nav-link block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#0190D4] rounded-lg font-medium transition duration-150">
+                    <i class="ph ph-graduation-cap text-lg mr-2"></i> Formations
+                </a>
+                <a href="blog.html"
+                    class="nav-link block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#0190D4] rounded-lg font-medium transition duration-150">
+                    <i class="ph ph-newspaper text-lg mr-2"></i> Blog
+                </a>
+                <a href="portfolio.html"
+                    class="nav-link block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#0190D4] rounded-lg font-medium transition duration-150">
+                    <i class="ph ph-image text-lg mr-2"></i> Portfolio
+                </a>
+                <a href="contact.html"
+                    class="nav-link block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#0190D4] rounded-lg font-medium transition duration-150">
+                    <i class="ph ph-envelope-simple text-lg mr-2"></i> Contact
+                </a>
+            </div>
+
+            <div class="flex-shrink-0 p-4 border-t border-gray-100 space-y-3 bg-gray-50">
+                <a href="#"
+                    class="block px-3 py-2 text-[#009850] hover:text-green-700 font-semibold transition duration-150 rounded-lg bg-green-50 hover:bg-green-100">
+                    <i class="ph ph-user text-lg mr-2"></i> Espace E-learning
+                </a>
+                <a href="services.html" class="block w-full">
+                    <button
+                        class="w-full bg-[#0190D4] hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300">
+                        Prendre rendez-vous
+                    </button>
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- hero -->
+    <div class="bg-[#E6F4FB66] py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
+                Notre Vision & Histoire
+            </h2>
+
+            <p class="mt-4 text-lg text-[#475569] max-w-3xl mx-auto">
+                Découvrez les racines du Cabinet Vigninou et l'engagement qui nous anime chaque jour auprès des
+                familles.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- a propos de nous -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+
+            <div class="order-2 lg:order-1 flex flex-col justify-start">
+
+                <h2 class="text-3xl font-bold text-gray-900 ">
+                    A propos de notre fondateur
+                </h2>
+                <div class="inline-block mx-auto mb-4">
+                    <img src="src/assets/images/vigni-10.png" alt="Trait de soulignement décoratif vert"
+                        class="h-10 w-52 mr-45 object-contain" />
+                </div>
+
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    Avec plus de vingt ans d'expérience dans l'éducation et l'accompagnement des familles, le fondateur
+                    du <span class="font-bold">Cabinet VIGNINOU POUR HUMANITÉ</span> a transformé sa vocation en un
+                    espace dédié au développement
+                    humain. Instituteur certifié et psychopédagogue formé à l'Université d'Abomey-Calavi puis à
+                    l'Université Senghor, il s'est spécialisé dans la compréhension des enfants.
+                </p>
+
+                <p class="text-gray-700 mb-10 leading-relaxed py-1">
+                    Un accompagnement marquant auprès d'un adolescent en grande difficulté a confirmé la nécessité d'un
+                    cadre offrant des solutions pédagogiques et humaines adaptées. Aujourd'hui doctorant en
+                    psychopédagogie, il met son expertise au service des familles, des écoles et des communautés. C'est
+                    ainsi qu'est né le <span class="font-bold">Cabinet VIGNINOU POUR HUMANITÉ</span> : un cadre
+                    professionnel, bienveillant et
+                    orienté vers l'épanouissement de chacun.
+                </p>
+
+                <div class="flex space-x-12 mt-auto">
+
+                    <div class="flex flex-col items-start">
+                        <div class="p-2 rounded-full bg-blue-100 mb-4">
+                            <i class="ph ph-calendar-blank text-3xl text-blue-500"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-gray-900">Depuis 2015</h3>
+                        <p class="text-[#475569] mt-1">
+                            Années d'expérience au service des familles.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col items-start">
+                        <div class="p-2 rounded-full bg-green-100 mb-4">
+                            <i class="ph ph-medal text-3xl text-green-500"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-gray-900">Certifié</h3>
+                        <p class="text-[#475569] mt-1">
+                            Reconnu par les instances internationales.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2">
+
+                <div class="relative rounded-lg shadow-xl overflow-hidden h-full">
+
+                    <img class="w-full h-full object-cover rounded-lg" src="src/assets/images/vigni-18.png"
+                        alt="Portrait de Dr Wahabi BALOGOUN, Fondateur">
+
+                    <div
+                        class="absolute bottom-0 w-4/6 mx-auto ml-2 mb-2 p-6 bg-white bg-opacity-90 backdrop-blur-sm rounded-lg shadow-lg">
+
+                        <p class="text-xl font-bold text-[#0190D4] text-center">
+                            Dr Wahabi BALOGOUN
+                        </p>
+
+                        <p class="text-sm ml-5 text-gray-700">
+                            Fondateur – Psychopédagogue & Coach familial
+                        </p>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- notre parcours -->
+    <section class="py-10 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+
+            <!-- Titre -->
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-black">Notre parcours</h2>
+                <div class="inline-block mx-auto mb-2">
+                    <img src="src/assets/images/vigni-10.png" alt="Trait de soulignement décoratif vert"
+                        class="h-10 w-32 mr-4 object-contain" />
+                </div>
+            </div>
+
+            <div class="relative">
+
+                <!-- Ligne verticale -->
+                <div
+                    class="absolute left-1/2 transform -translate-x-1/2 h-full bg-[#E6F4FB33] w-1 border-2 border-gray-100">
+                </div>
+
+                <div class="space-y-5">
+
+                    <!-- 1 - Droite -->
+                    <div class="flex justify-end items-start relative">
+                        <div class="absolute left-1/2 -translate-x-full -ml-3 top-0">
+                            <div class="w-10 h-10 mt-15 bg-[#0190D4] text-white rounded-full 
+                                 flex items-center justify-center  font-bold text-xl 
+                                border-white border-4 shadow-lg ">
+                                1
+                            </div>
+                        </div>
+
+
+                        <div class="w-1/2 pl-10">
+                            <div class="bg-[#F8FAFC] border-2 border-gray-200 p-6 rounded-xl ">
+                                <p class="text-[#0190D4] font-bold">2015</p>
+                                <h3 class="font-bold text-[#475569]">Création du Cabinet</h3>
+                                <p class="text-sm text-[#475569] mt-2">
+                                    Fondation du Cabinet VIGNINOU POUR HUMANITÉ et ouverture du premier espace dédié
+                                    à la psychologie de l’enfant et à l’accompagnement des familles.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2 - Gauche -->
+                    <div class="flex justify-start items-start relative">
+                        <div class="absolute translate-x-full ml-136 top-0">
+                            <div class="w-10 h-10 mt-15 bg-[#0190D4] text-white rounded-full 
+                             flex items-center border-white  shadow-lg border-4 justify-center font-bold text-xl">
+                                2
+                            </div>
+                        </div>
+
+
+                        <div class="w-1/2 pr-10">
+                            <div class="bg-[#F8FAFC] border-2 border-gray-200 p-6 rounded-xl ">
+                                <p class="text-[#0190D4] font-bold">2018</p>
+                                <h3 class="font-bold text-[#475569]">Expansion des services</h3>
+                                <p class="text-sm text-[#475569] mt-2">
+                                    Création du pôle pédagogique et lancement des premières formations pour parents,
+                                    enseignants et éducateurs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 - Droite -->
+                    <div class="flex justify-end items-start relative">
+                        <div class="absolute left-1/2 -translate-x-full -ml-3 top-0">
+                            <div class="w-10 mt-15 h-10 bg-[#0190D4] text-white rounded-full 
+                              flex items-center shadow-lg border-white border-4 justify-center font-bold text-x1">
+                                3
+                            </div>
+                        </div>
+
+                        <div class="w-1/2 pl-10">
+                            <div class="bg-[#F8FAFC] border-2 border-gray-200 p-6 rounded-xl ">
+                                <p class="text-[#0190D4] font-bold">2020</p>
+                                <h3 class="font-bold text-[#475569]">Digitalisation & Innovation</h3>
+                                <p class="text-sm text-[#475569] mt-2">
+                                    Téléconsultation, e-learning et outils numériques pour soutenir les familles
+                                    et les écoles.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4 - Gauche -->
+                    <div class="flex justify-start items-start relative">
+                        <div class="absolute  -translate-x-full ml-152 top-0">
+                            <div class="w-10 mt-15 h-10 bg-[#0190D4] text-white rounded-full 
+                              flex items-center shadow-lg border-white border-4 justify-center font-bold text-x1">
+                                4
+                            </div>
+                        </div>
+
+                        <div class="w-1/2 pr-10">
+                            <div class="bg-[#F8FAFC] border-2 border-gray-200 p-6 rounded-xl ">
+                                <p class="text-[#0190D4] font-bold">2024</p>
+                                <h3 class="font-bold text-[#475569]">Déploiement National & International</h3>
+                                <p class="text-sm text-[#475569] mt-2">
+                                    Expansion de l’équipe, nouveaux partenariats et collaborations internationales
+                                    dans les domaines éducatifs et psychopédagogiques.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- mission vision -->
+    <div class="bg-white py-12 px-4 mb-30 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row ">
+
+            <div class="lg:w-1/2 flex flex-col justify-center relative  rounded-l-[5rem] overflow-visible">
+                <img src="src/assets/images/WhatsApp Image 2025-12-06 à 18.00.12_37ea2b5a.jpg"
+                    alt="Père et enfant étudiant" class="image-personnalisee">
+
+
+            </div>
+
+            <div class="lg:w-1/2 p-8 lg:p-12">
+                <h2 class="text-3xl font-bold text-gray-800 inline-block pb-1">
+                    Vision & Mission du Cabinet
+                </h2>
+                <div class="inline-block mx-auto mb-4">
+                    <img src="src/assets/images/vigni-10.png" alt="Trait de soulignement décoratif vert"
+                        class="h-10 w-52 ml-25 object-contain" />
+                </div>
+
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    Au <strong class="text-gray-700">Cabinet VIGNINOU POUR HUMANITÉ</strong>, notre action s'appuie sur
+                    des valeurs humaines et scientifiques. Nous œuvrons pour le développement harmonieux des enfants, le
+                    soutien des familles et la formation des éducateurs, afin de créer un impact positif durable dans la
+                    société.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-8">
+                    <div class="sm:w-1/2">
+
+                        <div class="flex flex-col items-start mb-3">
+                            <i class="ph ph-target text-blue-500 text-5xl mb-1"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">Notre Mission</h3>
+                        </div>
+
+
+
+                        <p class="text-gray-600">
+                            Accompagner le développement de l'enfant, renforcer les compétences des parents et
+                            éducateurs, soutenir l'harmonie familiale, guider les jeunes dans leurs parcours et produire
+                            des connaissances utiles pour améliorer durablement les pratiques éducatives.
+                        </p>
+                    </div>
+
+                    <div class="sm:w-1/2">
+                        <div class="flex flex-col items-start mb-3">
+                            <i class="ph ph-binoculars text-blue-500 text-5xl mb-1"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">Notre Vision</h3>
+                        </div>
+
+                        <p class="text-gray-600">
+                            Bâtir une société où chaque enfant, parent et éducateur dispose des ressources nécessaires
+                            pour s'épanouir, réussir et transformer durablement son environnement, grâce à une expertise
+                            psychoéducative, scientifique et familiale de haut niveau.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- impact -->
+    <section class="relative text-white bg-blue-500 p-12 lg:p-16 bg-cover bg-center bg-no-repeat">
+
+        <!-- IMAGE DE FOND -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+            style="background-image: url('src/assets/images/vigni-21.png');">
+        </div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 relative z-10">
+
+            <div class="flex flex-col justify-center">
+                <h2 class="text-4xl font-bold  inline-block pb-1">
+                    Notre impact en quelques chiffres
+                </h2>
+                <div class="inline-block mx-auto mb-4">
+                    <img src="src/assets/images/vigni-10.png" alt="Trait de soulignement décoratif vert"
+                        class="h-10 w-52  object-contain" />
+                </div>
+                <p class="text-lg lg:text-xl leading-relaxed">
+                    Du nombre de familles accompagnées à la qualité de nos formations, ces chiffres témoignent de notre
+                    engagement constant et de notre expertise reconnue.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-y-8 gap-x-4 pt-4">
+
+                <div class="flex flex-col items-start">
+                    <p class="text-5xl lg:text-6xl text-[#B0DDF2]  font-extrabold mb-1">
+                        500+
+                    </p>
+                    <p class="text-lg  ">
+                        Familles Accompagnées
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start">
+                    <p class="text-5xl lg:text-6xl text-[#B0DDF2] font-extrabold mb-1">
+                        50+
+                    </p>
+                    <p class="text-lg ">
+                        Formations disponibles
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start">
+                    <p class="text-5xl lg:text-6xl text-[#B0DDF2] font-extrabold mb-1">
+                        10+
+                    </p>
+                    <p class="text-lg ">
+                        Experts Qualifiés
+                    </p>
+                </div>
+
+                <div class="flex flex-col  items-start">
+                    <p class="text-5xl lg:text-6xl text-[#B0DDF2] font-extrabold mb-1">
+                        98%
+                    </p>
+                    <p class="text-lg">
+                        Satisfaction Client
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Equipe -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-1">
+                    Notre équipe
+                </h2>
+                <div class="inline-block mx-auto mb-4">
+                    <img src="src/assets/images/vigni-10.png" alt="Trait de soulignement décoratif vert"
+                        class="h-10 w-52  object-contain" />
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+              <div class="bg-[#E6F4FB66] p-6 text-center rounded-xl border border-gray-100 
+         transition duration-300 transform hover:scale-[1.03] hover:shadow-xl 
+         hover:border-[#0190D4] hover:bg-[#0190D4] cursor-pointer group"> 
+        <div class="relative w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden shadow-md">
+            <img class="w-full h-full object-cover" src="src/assets/images/vigni-22.jpg"
+                alt="Portrait de Wallace D. Grace">
+        </div>
+
+        <h3 class="text-xl font-semibold text-gray-800 mt-2 transition duration-300 group-hover:text-white">
+            Wallace D. Grace
+        </h3>
+
+        <p class="text-blue-500 text-base transition duration-300 group-hover:text-white">
+            Psychologue clinicienne
+        </p>
+    </div>
+
+                <div class="bg-[#E6F4FB66] p-6 text-center rounded-xl  border border-gray-100">
+                    <div class="relative w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden  shadow-md">
+                        <img class="w-full h-full object-cover" src="src/assets/images/vigni-22.jpg"
+                            alt="Portrait de Wallace D. Grace">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-2">
+                        Wallace D. Grace
+                    </h3>
+                    <p class="text-blue-500 text-base">
+                        Psychologue clinicienne
+                    </p>
+                </div>
+
+                <div class="bg-[#E6F4FB66] p-6 text-center rounded-xl  border border-gray-100">
+                    <div class="relative w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden  shadow-md">
+                        <img class="w-full h-full object-cover" src="src/assets/images/vigni-22.jpg"
+                            alt="Portrait de Wallace D. Grace">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-2">
+                        Wallace D. Grace
+                    </h3>
+                    <p class="text-blue-500 text-base">
+                        Psychologue clinicienne
+                    </p>
+                </div>
+
+                <div class="bg-[#E6F4FB66] p-6 text-center rounded-xl  border border-gray-100">
+                    <div class="relative w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden  shadow-md">
+                        <img class="w-full h-full object-cover" src="src/assets/images/vigni-22.jpg"
+                            alt="Portrait de Wallace D. Grace">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-2">
+                        Wallace D. Grace
+                    </h3>
+                    <p class="text-blue-500 text-base">
+                        Psychologue clinicienne
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- domaine expertise -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-800 text-center  relative">
+                Nos domaines d'expertise
+            </h2>
+            <div class="inline-block mx-auto">
+                <img src="src/assets/images/vigni-10.png" alt="Trait de soulignement décoratif vert"
+                    class="h-10 w-42 ml-142  object-contain" />
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-[#E2E8F0] shadow-sm 
+           hover:shadow-xl transition duration-300 flex flex-col items-center text-center">
+
+                    <i class="ph ph-brain font-semibold mb-5 text-4xl text-[#475569]"></i>
+
+                    <p class="text-base font-semibold text-gray-700">Psychologie Enfant</p>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-[#E2E8F0] shadow-sm 
+                   hover:shadow-xl transition duration-300 flex flex-col items-center text-center">
+                    <i class="ph ph-users-three font-semibold mb-5 text-4xl text-[#475569] "></i>
+                    <p class="text-base font-semibold text-gray-700">Méditation Familiale</p>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-[#E2E8F0] shadow-sm 
+                        hover:shadow-xl transition duration-300 flex flex-col items-center text-center">
+
+                    <i class="ph ph-smiley font-semibold mb-5 text-4xl text-[#475569]"></i>
+                    <p class="text-base font-semibold text-gray-700">Gestion Émotions</p>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-[#E2E8F0] shadow-sm 
+                        hover:shadow-xl transition duration-300 flex flex-col items-center text-center">
+                    <i class="ph ph-graduation-cap font-semibold mb-5 text-4xl text-[#475569]"></i>
+                    <p class="text-base font-semibold text-gray-700">Orientation Scolaire</p>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-[#E2E8F0] shadow-sm 
+                        hover:shadow-xl transition duration-300 flex flex-col items-center text-center">
+                    <i class="ph ph-users font-semibold mb-5 text-4xl text-[#475569]"></i>
+                    <p class="text-base font-semibold text-gray-700">Coaching Parental</p>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-[#E2E8F0] shadow-sm 
+                        hover:shadow-xl transition duration-300 flex flex-col items-center text-center">
+
+                    <i class="ph ph-book  font-semibold mb-5 text-4xl text-[#475569]"></i>
+                    <p class="text-base font-semibold text-gray-700">Remédiation Pédagogique</p>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-[#E2E8F0] shadow-sm 
+                        hover:shadow-xl transition duration-300 flex flex-col items-center text-center">
+
+                    <i class="ph ph-heart-straight-break font-semibold mb-5 text-4xl text-[#475569]"></i>
+                    <p class="text-base font-semibold text-gray-700">Thérapie Couple</p>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-[#E2E8F0] shadow-sm 
+                        hover:shadow-xl transition duration-300 flex flex-col items-center text-center">
+                    <i class="ph ph-chart-bar font-semibold mb-5 text-4xl text-[#475569]"></i>
+                    <p class="text-base font-semibold text-gray-700">Bilans Psychologiques</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="bg-[#0f172a] text-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+
+                <div class="space-y-4">
+                    <a href="index.html">
+                        <img src="src/assets/images/logo.png" alt="Logo Cabinet Vignyrou"
+                            class="h-20 w-20 object-contain mb-4"></a>
+
+                    <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
+                        Un accompagnement humain et bienveillant <br>
+                        pour l'épanouissement des enfants et des <br>
+                        familles. Psychologie, pédagogie et coaching au service
+                        de votre croissance.
+                    </p>
+                    <div class="flex space-x-3 pt-2">
+
+                        <a href="" class="
+                         flex items-center justify-center 
+                              w-12 h-12 rounded-full bg-gray-600 
+                                hover:bg-[#0190D4] transition-colors duration-300
+                                                ">
+                            <i class="ph ph-facebook-logo text-white text-3xl"></i>
+                        </a>
+
+                        <a href="" class="
+                          flex items-center justify-center 
+                             w-12 h-12 rounded-full bg-gray-600 
+                              hover:bg-[#0190D4] transition-colors duration-300
+                                            ">
+                            <i class="ph ph-tiktok-logo text-white text-3xl"></i>
+                        </a>
+
+                        <a href="" class="
+                                    flex items-center justify-center 
+                                    w-12 h-12 rounded-full bg-gray-600 
+                                    hover:bg-[#0190D4] transition-colors duration-300
+                                ">
+                            <i class="ph ph-instagram-logo text-white text-3xl"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="ml-20">
+                    <h3 class="text-xl font-semibold mb-6 text-white">Liens Rapides</h3>
+                    <ul class="space-y-3 text-sm">
+
+                        <li><a href="index.html" class="hover:text-blue-400 transition">Accueil</a></li>
+                        <li><a href="a-propos.html" class="hover:text-blue-400 transition">A propos</a></li>
+                        <li><a href="services.html" class="hover:text-blue-400 transition">Nos services</a></li>
+                        <li><a href="formations.html" class="hover:text-blue-400 transition">Formations</a></li>
+                        <li><a href="blog.html" class="hover:text-blue-400 transition">Blog</a></li>
+                        <li><a href="portfolio.html" class="hover:text-blue-400 transition">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400 transition">Contact</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="ml-4">
+                    <h3 class="text-xl font-semibold mb-6 text-white">Nos Expertises</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li>
+                            <a href="services.html?filter=pedagogie"
+                                class="hover:text-white transition text-gray-500">Pédagogie positive</a>
+                        </li>
+                        <li>
+                            <a href="services.html?filter=psychologie"
+                                class="hover:text-white transition text-gray-500">Psychologie de l'enfant</a>
+                        </li>
+                        <li>
+                            <a href="services.html?filter=coaching"
+                                class="hover:text-white transition text-gray-500">Coaching familial</a>
+                        </li>
+                        <li>
+                            <a href="services.html?filter=orientation"
+                                class="hover:text-white transition text-gray-500">Orientation scolaire</a>
+                        </li>
+                        <li>
+                            <a href="services.html?filter=recherche"
+                                class="hover:text-white transition text-gray-500">Recherche & Développement</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold mb-6 text-white">Nous Contacter</h3>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start">
+                            <i class="ph ph-map-pin text-yellow-500 mr-3 text-xl mt-1"></i>
+                            <p class="text-gray-500">Îlot. Maison Agnès TCHIAKPE, AKASSATO, ZOPAH</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ph ph-phone text-blue-400 text-xl mr-3"></i>
+                            <p class="text-gray-500">+229 0143380692</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ph ph-envelope-simple text-xl text-[#009850] mr-3"></i>
+                            <p class="text-gray-500">vphwhabi2024@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <h4 class="font-medium mb-3">NEWSLETTER</h4>
+                        <form class="flex space-x-1">
+                            <input type="email" placeholder="Votre email" class="py-1 px-4 w-full rounded-md 
+                   bg-white/10 text-white placeholder-gray-400 border border-transparent 
+                   focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150">
+                            <button type="submit" class="p-2 bg-blue-500 hover:bg-[#0190D4] rounded-md transition 
+                               flex items-center justify-center">
+                                <i class="ph ph-envelope-simple text-white text-2xl"></i>
+                            </button>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 mb-6"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p class="mb-3 md:mb-0">© 2025 Cabinet Vignyrou Pour Humanité. Tous droits réservés.</p>
+                <div class="space-x-4">
+                    <a href="mention.html" class="hover:text-gray-300 transition">Mentions légales</a>
+                    <a href="cgv.html" class="hover:text-gray-300 transition">CGV</a>
+                    <a href="politique.html" class="hover:text-gray-300 transition">Politiques de confidentialité</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" class="fixed bottom-4 right-4 z-50 p-3
+                bg-[#0190D4] text-white
+                rounded-full shadow-xl
+                transition-opacity duration-300 opacity-0 pointer-events-none
+                hover:bg-[#0190D4] hover:text-[#016a0e] text-sm md:text-base">
+
+        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="src/scripts/script-index.js"></script>
+
+
+
+</body>
+
+</html>
