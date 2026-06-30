@@ -65,3 +65,11 @@
         // Si aucun filtre n'est présent (l'utilisateur arrive normalement sur la page), 
         // toutes les cartes sont visibles par défaut (pas besoin de masquer).
     });
+
+
+
+
+
+
+
+  

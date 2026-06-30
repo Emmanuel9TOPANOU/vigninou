@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 2. Logique du bouton "Scroll To Top" ---
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-    const scrollThreshold = 300; 
+    const scrollThreshold = 300;
 
     function toggleScrollToTopButton() {
-        if (!scrollToTopBtn) return; 
+        if (!scrollToTopBtn) return;
         if (window.scrollY > scrollThreshold) {
             scrollToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
             scrollToTopBtn.classList.add('opacity-100');
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (scrollToTopBtn) {
         scrollToTopBtn.addEventListener('click', () => {
-             window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         window.addEventListener('scroll', toggleScrollToTopButton);
         toggleScrollToTopButton();
@@ -40,25 +40,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 3. Logique du "Sticky Header" ---
     const infoBar = document.getElementById('header-info-bar');
     const navbar = document.getElementById('main-navbar');
-    
+
     if (infoBar && navbar) {
         // La hauteur de la barre d'info doit être calculée après le chargement du DOM
-        let infoBarHeight = infoBar.offsetHeight; 
-        let lastScrollTop = 0; 
-        const scrollThreshold = 100; 
-        
+        let infoBarHeight = infoBar.offsetHeight;
+        let lastScrollTop = 0;
+        const scrollThreshold = 100;
+
         // S'assurer que la hauteur est mise à jour en cas de redimensionnement
         window.addEventListener('resize', () => {
             infoBarHeight = infoBar.offsetHeight;
         });
 
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             let currentScroll = window.scrollY || document.documentElement.scrollTop;
 
             if (currentScroll > infoBarHeight) {
                 // SCROLL VERS LE BAS ou au-delà de la barre d'info
-                navbar.classList.add('fixed', 'top-0', 'z-40', 'shadow-lg'); 
-                
+                navbar.classList.add('fixed', 'top-0', 'z-40', 'shadow-lg');
+
                 if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
                     // Scroll Down: Cacher la barre d'info
                     infoBar.style.transform = `translateY(-${infoBarHeight}px)`;
@@ -88,14 +88,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fonction pour ouvrir la sidebar
     function openSidebar() {
-        sidebar.classList.remove('translate-x-full'); 
-        if (overlay) overlay.classList.remove('hidden'); 
+        sidebar.classList.remove('translate-x-full');
+        if (overlay) overlay.classList.remove('hidden');
         openButton.setAttribute('aria-expanded', 'true');
     }
 
     // Fonction pour fermer la sidebar
     function closeSidebar() {
-        sidebar.classList.add('translate-x-full'); 
+        sidebar.classList.add('translate-x-full');
         if (overlay) overlay.classList.add('hidden');
         openButton.setAttribute('aria-expanded', 'false');
     }
@@ -108,12 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeButton && sidebar) {
         closeButton.addEventListener('click', closeSidebar);
     }
-    
+
     // Fermer si l'utilisateur clique sur l'overlay (très important pour l'UX mobile)
     if (overlay) {
         overlay.addEventListener('click', closeSidebar);
     }
-    
+
     // Fermer si l'utilisateur clique sur un lien de la sidebar
     if (sidebar) {
         const sidebarLinks = sidebar.querySelectorAll('a');
@@ -122,61 +122,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    
+    const track = document.getElementById("carousel-track");
+    const items = document.querySelectorAll(".carousel-item");
+    const btnLeft = document.getElementById("btn-left");
+    const btnRight = document.getElementById("btn-right");
 
-    // --- 5. Logique du Carousel (Témoignages) ---
-    const track = document.getElementById('carousel-track');
-    const btnLeft = document.getElementById('btn-left');
-    const btnRight = document.getElementById('btn-right');
-    const items = document.querySelectorAll('.carousel-item');
+    let index = 0;
 
-    if (track && btnLeft && btnRight && items.length > 0) {
-        let currentIndex = 0;
-
-        const getItemsPerView = () => {
-            if (window.innerWidth >= 1024) return 3;
-            if (window.innerWidth >= 768) return 2;
-            return 1;
-        };
-
-        const updateCarousel = () => {
-            const itemsPerView = getItemsPerView();
-            // Utiliser la largeur du conteneur parent du item si possible pour la fiabilité
-            const containerWidth = track.parentElement.offsetWidth;
-            const itemWidth = containerWidth / itemsPerView; 
-            
-            // Appliquer la transformation en fonction de l'index et de la largeur de l'élément affiché
-            track.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
-            track.style.display = 'grid'; // S'assurer que le grid est maintenu
-            track.style.gridTemplateColumns = `repeat(${items.length}, 1fr)`; // S'assurer que tous les items sont en place
-
-            btnLeft.disabled = currentIndex === 0;
-            btnRight.disabled = currentIndex >= items.length - itemsPerView;
-        };
-
-        btnRight.addEventListener('click', () => {
-            const itemsPerView = getItemsPerView();
-            if (currentIndex < items.length - itemsPerView) {
-                currentIndex++;
-                updateCarousel();
-            }
-        });
-
-        btnLeft.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            }
-        });
-
-        window.addEventListener('resize', () => {
-            // Remettre à l'index 0 au redimensionnement pour éviter les débordements
-            currentIndex = 0; 
-            updateCarousel();
-        });
-
-        updateCarousel(); // Appel initial
+    function updateCarousel() {
+        // En mode MD et plus grand, le conteneur carrousel (w-2/3) doit être translaté en fonction de la largeur de l'élément (w-1/2)
+        // La largeur de l'élément carousel-item est de 50% du conteneur parent (w-2/3) + le padding/marge de 16px.
+        if (window.innerWidth >= 768) {
+            // Sur un écran MD, chaque élément fait environ 50% de la largeur du conteneur (w-2/3)
+            // itemWidth = (largeur de la carte blanche) + (marge/padding)
+            const parentWidth = track.parentElement.offsetWidth;
+            // items[0].offsetWidth prend en compte la largeur de l'item (w-1/2 du parent) + le padding p-2
+            const itemWidth = items[0].offsetWidth + 16; 
+            track.style.transform = `translateX(-${index * itemWidth}px)`;
+        } else {
+            // Sur mobile (full width), l'élément fait 100% de la largeur du conteneur
+            const itemWidth = items[0].offsetWidth + 16;
+            track.style.transform = `translateX(-${index * itemWidth}px)`;
+        }
+        
+        // La logique d'index doit également être ajustée si vous passez à un carrousel qui affiche plusieurs éléments à la fois sur MD
+        // Pour l'instant, je garde la logique d'incrémentation simple.
     }
+
+    btnRight.addEventListener("click", () => {
+        // Logique pour éviter que l'index ne dépasse le nombre d'éléments disponibles pour le défilement
+        const maxIndex = items.length - (window.innerWidth >= 768 ? 1 : 1); // Laisser le dernier élément visible à droite (si 3 cartes, maxIndex = 3 - 2 = 1)
+
+        if (index < maxIndex) index++;
+        updateCarousel();
+    });
+
+    btnLeft.addEventListener("click", () => {
+        if (index > 0) index--;
+        updateCarousel();
+    });
+
+    // Initialisation et ajustement en cas de redimensionnement
+    window.addEventListener("resize", updateCarousel);
+    updateCarousel(); // Appel initial pour positionner correctement
+
+   
 
     // --- 6. Initialisation AOS (Animation on Scroll) ---
     AOS.init();
 });
+
+
